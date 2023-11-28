@@ -19,7 +19,7 @@ class _LoginViewState extends State<LoginView> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const CircleAvatar(
-              radius: 40,
+              radius: 50,
               backgroundImage: AssetImage('assets/d7.jpg'),
             ),
             const SizedBox(
@@ -30,14 +30,36 @@ class _LoginViewState extends State<LoginView> {
               height: 30,
             ),
             TextFormField(
+              keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
+                  label: const Text('Email'),
+                  //hintText: 'Enter y email',
+                  prefixIcon: const Icon(Icons.email),
                   enabledBorder: OutlineInputBorder(
                       borderSide: const BorderSide(color: Colors.blue),
                       borderRadius: BorderRadius.circular(20)),
                   focusedBorder: OutlineInputBorder(
                       borderSide: const BorderSide(color: Colors.black),
                       borderRadius: BorderRadius.circular(20))),
-            )
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            TextFormField(
+              obscureText: true,
+              keyboardType: TextInputType.visiblePassword,
+              decoration: InputDecoration(
+                  // hintText: 'Enter y email',
+                  label: const Text('Password'),
+                  prefixIcon: const Icon(Icons.lock),
+                  suffixIcon: const Icon(Icons.remove_red_eye),
+                  focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15),
+                      borderSide: const BorderSide(color: Colors.black)),
+                  enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15),
+                      borderSide: const BorderSide(color: Colors.blue))),
+            ),
           ],
         )),
       ),
