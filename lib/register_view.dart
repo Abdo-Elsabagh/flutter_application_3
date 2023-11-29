@@ -83,7 +83,7 @@ class _RegisterViewState extends State<RegisterView> {
             ),
             ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).push(
+                  Navigator.of(context).pushReplacement(
                       MaterialPageRoute(builder: (context) => HomeViem()));
                 },
                 child: const Text('Login')),
@@ -93,7 +93,7 @@ class _RegisterViewState extends State<RegisterView> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text('if you have not an account'),
+                const Text('if you have an account'),
                 TextButton(
                     onPressed: () {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(

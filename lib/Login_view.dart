@@ -65,12 +65,31 @@ class _LoginViewState extends State<LoginView> {
             const SizedBox(
               height: 20,
             ),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => HomeViem()));
+            // ElevatedButton(
+            //     onPressed: () {
+            //       Navigator.of(context).pushReplacement(
+            //           MaterialPageRoute(builder: (context) => HomeViem()));
+            //     },
+            //     child: const Text('Login')),
+            GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    builder: (context) => HomeViem(),
+                  ));
                 },
-                child: const Text('Login')),
+                child: Container(
+                  width: double.infinity,
+                  alignment: Alignment.center,
+                  height: 40,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Colors.blue),
+                  child: const Text(
+                    'Login',
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                  ),
+                )),
             const SizedBox(
               height: 20,
             ),
@@ -80,7 +99,7 @@ class _LoginViewState extends State<LoginView> {
                 const Text('if you have not an account'),
                 TextButton(
                     onPressed: () {
-                      Navigator.of(context).push(MaterialPageRoute(
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (context) => const RegisterView()));
                     },
                     child: const Text('Create one!'))

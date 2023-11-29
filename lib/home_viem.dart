@@ -96,12 +96,13 @@ class HomeViem extends StatelessWidget {
                 child: ListView.separated(
                     itemBuilder: (context, index) {
                       return ListTile(
+                        onTap: () {},
                         leading: CircleAvatar(
                           radius: 40,
                           backgroundImage: AssetImage(contact[index].imgLink),
                         ),
                         title: Text(
-                          contact[index].Name + ' ' + contact2[index].Name,
+                          '${contact[index].Name} ${contact2[index].Name}',
                           style: const TextStyle(fontWeight: FontWeight.bold),
                         ),
                         subtitle: const Text('Hello dear,How are you'),
