@@ -102,7 +102,10 @@ class _LoginViewState extends State<LoginView> {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (context) => const RegisterView()));
                     },
-                    child: const Text('Create one!'))
+                    child: const Text(
+                      'Create one!',
+                      style: TextStyle(color: Colors.blue),
+                    ))
               ],
             )
           ],

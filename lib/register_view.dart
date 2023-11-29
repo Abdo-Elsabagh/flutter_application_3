@@ -100,7 +100,10 @@ class _RegisterViewState extends State<RegisterView> {
                         builder: (context) => const LoginView(),
                       ));
                     },
-                    child: const Text('Login Now'))
+                    child: const Text(
+                      'Login Now',
+                      style: TextStyle(color: Colors.blue),
+                    ))
               ],
             )
           ],
