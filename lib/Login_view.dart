@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_3/home_viem.dart';
-import 'package:flutter_application_3/register_viem.dart';
+import 'package:flutter_application_3/register_view.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -81,7 +81,7 @@ class _LoginViewState extends State<LoginView> {
                 TextButton(
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => const RegisterViem()));
+                          builder: (context) => const RegisterView()));
                     },
                     child: const Text('Create one!'))
               ],

@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_3/Login_view.dart';
+import 'package:flutter_application_3/home_viem.dart';
 
-class RegisterViem extends StatefulWidget {
-  const RegisterViem({super.key});
+class RegisterView extends StatefulWidget {
+  const RegisterView({super.key});
 
   @override
-  State<RegisterViem> createState() => _RegisterViemState();
+  State<RegisterView> createState() => _RegisterViewState();
 }
 
-class _RegisterViemState extends State<RegisterViem> {
+class _RegisterViewState extends State<RegisterView> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -79,7 +81,12 @@ class _RegisterViemState extends State<RegisterViem> {
             const SizedBox(
               height: 20,
             ),
-            ElevatedButton(onPressed: () {}, child: const Text('Login')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => HomeViem()));
+                },
+                child: const Text('Login')),
             const SizedBox(
               height: 20,
             ),
@@ -87,7 +94,13 @@ class _RegisterViemState extends State<RegisterViem> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text('if you have not an account'),
-                TextButton(onPressed: () {}, child: const Text('Login Now'))
+                TextButton(
+                    onPressed: () {
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (context) => const LoginView(),
+                      ));
+                    },
+                    child: const Text('Login Now'))
               ],
             )
           ],
