@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_3/home_viem.dart';
-import 'package:flutter_application_3/register_viem.dart';
 
-class LoginView extends StatefulWidget {
-  const LoginView({super.key});
+class RegisterViem extends StatefulWidget {
+  const RegisterViem({super.key});
 
   @override
-  State<LoginView> createState() => _LoginViewState();
+  State<RegisterViem> createState() => _RegisterViemState();
 }
 
-class _LoginViewState extends State<LoginView> {
+class _RegisterViemState extends State<RegisterViem> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -28,6 +26,22 @@ class _LoginViewState extends State<LoginView> {
               height: 30,
             ),
             const Text('Login to your account'),
+            const SizedBox(
+              height: 30,
+            ),
+            TextFormField(
+              keyboardType: TextInputType.name,
+              decoration: InputDecoration(
+                  // hintText: 'Enter y email',
+                  label: const Text('Name'),
+                  prefixIcon: const Icon(Icons.email_rounded),
+                  focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15),
+                      borderSide: const BorderSide(color: Colors.blue)),
+                  enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15),
+                      borderSide: const BorderSide(color: Colors.blue))),
+            ),
             const SizedBox(
               height: 30,
             ),
@@ -65,12 +79,7 @@ class _LoginViewState extends State<LoginView> {
             const SizedBox(
               height: 20,
             ),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => HomeViem()));
-                },
-                child: const Text('Login')),
+            ElevatedButton(onPressed: () {}, child: const Text('Login')),
             const SizedBox(
               height: 20,
             ),
@@ -78,12 +87,7 @@ class _LoginViewState extends State<LoginView> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text('if you have not an account'),
-                TextButton(
-                    onPressed: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => const RegisterViem()));
-                    },
-                    child: const Text('Create one!'))
+                TextButton(onPressed: () {}, child: const Text('Login Now'))
               ],
             )
           ],
